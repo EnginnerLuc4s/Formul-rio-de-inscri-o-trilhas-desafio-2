@@ -1,0 +1,320 @@
+/* Importação da Fonte */  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');  
+
+/* Variáveis de Cores e Tipografia */  
+:root {  /* Aqui eu posso mudar as cores e tipografia do site inteiro */
+    /* Cores */  
+    --brand-primary: #F25F5C;  /* aqui eu posso mudar a cor principal do site */
+    --brand-secondary: #F67841;  /* aqui eu posso mudar a cor secundária do site */
+    --text-primary: #292524;  /* aqui eu posso mudar a cor do texto principal do site */
+    --text-secondary: #57534E;  /* aqui eu posso mudar a cor do texto secundário do site */
+    --text-tertiary: #8F8881;  /* aqui eu posso mudar a cor do texto terciário do site */
+    --surface-primary:#EAEAEA;  /* aqui eu posso mudar a cor do fundo principal do site */
+    --surface-secondary: #FFD3BAD6;  /* aqui eu posso mudar a cor do fundo secundário do site */
+    --stroke-default: #FFFFFF;  /* aqui eu posso mudar a cor do contorno padrão do site */
+    --stroke-highlight: #F25F5C;  /* aqui eu posso mudar a cor do contorno destacado do site */
+    --semantic-error: #DC2626; /* aqui eu posso mudar a cor de erro do site */ 
+
+    /* Tipografia */  
+    --font-family: 'Poppins', sans-serif;  /* aqui eu posso mudar a fonte do site */
+    --heading1-size: 32px;  
+    --heading2-size: 24px;  
+    --heading3-size: 20px;  
+    --heading4-size: 16px;  
+    --line-height: 1.2;  
+    --font-weight-bold: 700;  
+    --font-weight-regular: 400;  
+}  
+
+/* Geral */  
+body {  
+    font-family: var(--font-family);  
+    font-size: 16px;  
+    background-color: #2D2B3E; /* gostei mais dessa cor */
+    display: flex;  /* Para centralizar o conteúdo */
+    justify-content: center; /* Centraliza na horizontal */  
+    align-items: center; /* Centraliza na vertical */  
+    min-height: 100vh; /* Ocupa toda a altura da tela */  
+    margin: 0;  
+    color: var(--text-primary);  
+    overflow: auto;  /* Adiciona barra de rolagem quando necessário */
+}  
+
+/* Container Principal */  
+.container {  
+    background: var(--surface-primary);  
+    padding: 40px; /* Ajustado para se adequar ao layout */  
+    border-radius: 20px;  
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  
+    display: flex;  
+    flex-wrap: wrap; /* Para responsividade */  
+    gap: 40px; /* Espaçamento entre os itens do contêiner */  
+    max-width: 1200px;  
+    width: 100%;  
+}  
+
+/* Conteúdo principal lado-a-lado */  
+.content {  
+    display: flex;  /* Para alinhar os itens lado a lado */
+    flex-wrap: wrap;  /* Aui eu posso mudar o layout para responsivo */
+    gap: 40px;  
+    justify-content: center; /* Centraliza o conteúdo */  
+}  
+
+/* Ilustração */  
+.illustration img {  
+    max-width: 100%;  
+    width: 300px;  
+    height: auto;  /* ajusta a altura proporcionalmente */
+    border-radius: 10px; /* Opcional, para suavizar o design */  
+}  
+
+/* Formulário */  
+.formulario {  
+    flex: 1 1 500px; /* Ajusta o tamanho do formulário */  
+    min-width: 300px;  
+}  
+
+/* Títulos e Textos */  
+h2 {  
+    text-align: center;  /* Centraliza o texto */
+    color: var(--brand-primary);  
+    font-size: var(--heading2-size);  
+    margin-bottom: 20px;  
+    font-weight: var(--font-weight-bold);  /* Deixa o texto em negrito */
+}  
+
+legend {  /* Estiliza a legenda do formulário */
+    font-weight: var(--font-weight-bold);  
+    margin-bottom: 10px;  
+    width: 100%;  
+    text-align: center;  
+    font-size: var(--heading3-size);  
+    color: var(--brand-secondary);  
+}  
+
+p {  
+    font-size: 16px;  
+    line-height: var(--line-height);  /* Espaçamento entre linhas */
+    text-align: justify;  
+    color: var(--text-secondary);  
+    margin-bottom: 20px;  
+}  
+
+/* Inputs, Seletores e Botões */  
+input,  /* Estiliza todos os inputs */
+select,  /* Estiliza todos os selects */
+textarea {  /* Estiliza todos os textareas */
+    width: 100%;  
+    padding: 12px;  
+    margin-top: 5px;  
+    border: 1px solid var(--stroke-default);  /* Adiciona uma borda ao redor do input */
+    border-radius: 20px;  
+    font-size: 16px;  
+    color: var(--text-primary);  
+}  
+
+input:focus,  /* Estiliza os inputs quando estão em foco */
+select:focus,  
+textarea:focus {  
+    border-color: var(--stroke-highlight);  
+    outline: none;  
+    box-shadow: 0 0 5px var(--stroke-highlight);/* Adiciona uma sombra ao redor do input */  
+}  
+
+/* Cards das Trilhas para estilizar */  
+.trilhas {  
+    display: flex;  /* Alinha os cards lado a lado */
+    flex-wrap: wrap;  /* Quebra a linha quando não couber mais */
+    gap: 20px;  
+    justify-content: center;  
+    margin-top: 20px;  
+}  
+
+.card {  /* Estiliza os cards das trilhas */
+    display: flex;  
+    flex-direction: column;  /* Alinha os itens verticalmente */
+    align-items: center;  
+    gap: 8px;  
+    padding: 16px;  
+    border: 2px solid var(--stroke-default);  
+    border-radius: 16px;  
+    text-align: center;  
+    cursor: pointer;  
+    transition: 0.3s;  
+    min-width: 150px;  
+    max-width: 200px;  
+    width: 100%;  
+    background-color: var(--surface-primary);  
+}  
+
+.card:hover {  /* Estiliza os cards das trilhas quando estão em hover */
+    border-color: var(--brand-secondary);  
+    background-color: var(--surface-secondary);  
+    transform: scale(1.05);  /* Aumenta levemente o card ao passar o mouse */
+}  
+
+.card img {  
+    width: 48px;  
+    height: 48px;  
+}  
+
+.card span {  /* Estiliza o texto dentro do card */
+    font-size: 14px;  
+    font-weight: var(--font-weight-bold);  
+    color: var(--text-primary);  
+}  
+
+/* Termos */  
+.termos {  
+    display: flex;  
+    gap: 10px;  
+    align-items: flex-start;  
+    font-size: 14px;  
+    line-height: 1.4;  
+    margin-top: 20px;  
+}  
+
+.termos a {  /* Estiliza os links dentro dos termos */
+    color: var(--brand-primary);  
+    text-decoration: underline;  
+    font-weight: bold;  
+    transition: color 0.2s;  
+}  
+
+.termos a:hover {  /* Estiliza os links dentro dos termos quando estão em hover */
+    color: var(--brand-secondary);  
+}  
+
+/* Botões */  
+.botoes {  
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: flex-end;  /* Alinha os botões à direita */
+    gap: 20px;  
+    margin-top: auto;  
+}  
+
+button {  
+    background-color: var(--brand-primary);  
+    color: var(--surface-primary);  
+    border: none;  
+    cursor: pointer;  /* Muda o cursor ao passar por cima do botão */
+    padding: 12px 18px;  
+    border-radius: 20px;  
+    font-size: 16px;  
+    font-weight: var(--font-weight-bold);  
+    transition: background-color 0.3s ease; 
+    transition: all 0.3s ease; /* Suaviza as transformações de cor e tamanho */  
+
+}  
+
+button:hover {  
+    background-color: #F19994; 
+    transform: scale(1.05); /* Aumenta levemente o botão ao passar o mouse */   
+}  
+
+button:disabled {  
+    background-color: var(--stroke-default);  /* Muda a cor do botão quando está desabilitado */
+    cursor: not-allowed;  /* Muda o cursor quando está desabilitado */
+}  
+
+/* Links */  
+a {  
+    color: var(--brand-primary);  
+    text-decoration: none;  
+    font-weight: var(--font-weight-bold);  
+    transition: color 0.2s;  
+}  
+
+a:hover {  
+    text-decoration: underline;  /* Sublinha o link quando está em hover */
+    color: var(--brand-secondary);  
+}
+.btn-upload {  
+    display: inline-flex;  /* Para alinhar o ícone e o texto */
+    align-items: center;  /* Alinha os itens verticalmente */
+    background-color: transparent;  
+    border: none;  
+    cursor: pointer;  
+    padding: 0;  
+}  
+
+.icone-upload {  
+    width: 40px; /* Ajuste o tamanho do ícone conforme necessário */  
+    height: 40px;  
+    fill: var(--brand-primary);
+}  
+
+.hidden-input {  
+    position: absolute;  /* Esconde o input */
+    width: 1px;  
+    height: 1px;  
+    padding: 0;  
+    margin: -1px;  
+    overflow: hidden;  
+    clip: rect(0,0,0,0);  
+    border: 0;  
+}
+.label[for="documento"] {  /* esse comando é para estilizar o label do input */
+    display: inline-flex;  
+    align-items: center;  
+}  
+
+.upload-comprovante{
+    width: 40px; /* Ajuste o tamanho do ícone conforme necessário */  
+    height: 40px;  
+    fill: var(--brand-primary);
+
+}
+/* Campo de upload personalizado */  
+.upload-container {  
+    font-family: 'Poppins', sans-serif;  
+    margin: 20px 0;  
+    text-align: left;  
+}  
+
+.upload-container p {  /* Estiliza o texto do campo de upload */
+    margin: 0 0 8px 0;  
+    font-size: 14px;  
+    font-weight: bold;  
+}  
+
+.upload-box {  /* Estiliza a caixa de upload */
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    width: 100%;  
+    max-width: 500px;  
+    height: 150px;  
+    border: 2px dashed #ddd; /* Borda pontilhada */  
+    border-radius: 10px;  
+    background-color: #FFF; /* Fundo branco */  
+    cursor: pointer;  
+    padding: 10px;  
+    transition: border-color 0.3s;  
+}  
+
+.upload-box:hover {  
+    border-color: #F24464; /* Cor de destaque no hover */  
+}  
+
+.upload-box img {  /* Estiliza o ícone dentro da caixa de upload */
+    width: 40px; /* Tamanho do ícone */  
+    height: 40px;  
+    margin-bottom: 10px;  
+    opacity: 0.7; /* Ícone fica mais sutil */  
+}  
+
+.upload-box span {  /* Estiliza o texto dentro da caixa de upload */
+    font-size: 14px;  
+    color: #575757;  
+    text-align: center;  
+    opacity: 0.8;  
+}  
+
+.hidden-input {  
+    display: none; /* O input de tipo file é oculto */  
+}
+
