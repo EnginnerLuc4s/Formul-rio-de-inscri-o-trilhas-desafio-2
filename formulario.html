@@ -1,0 +1,194 @@
+<!DOCTYPE html>  
+<html lang="pt-br">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Formulário de Inscrição</title>  
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo de estilos CSS externo -->  
+</head>  
+<body>  
+    <div class="container"> <!-- Container principal para agrupar todo o conteúdo -->  
+        <div class="content"> <!-- Seção que separa o conteúdo principal em duas partes (ilustração e formulário) -->  
+
+            <!-- Ilustração visual do programa -->  
+            <div class="illustration">  
+                <img src="codyboy.jpg" alt="Ilustração do Programa Trilhas"> <!-- Imagem representativa do programa -->  
+            </div>  
+
+            <!-- Seção do Formulário -->  
+            <div class="formulario_inscricao">  
+                <h2>Formulário de Inscrição</h2> <!-- Título do formulário -->  
+                <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p> <!-- Instrução breve -->  
+
+                <form id="formulario"> <!-- Início do formulário -->  
+                    
+                    <!-- Informações do Participante -->  
+                    <fieldset>  <!-- O fieldset serve para agrupar campos relacionados -->  
+                        <legend>Informações do participante</legend> <!-- Título do campo -->  
+
+                        <label for="nome">Nome completo</label>   
+                        <input type="text" id="nome" name="nome" required> <!-- Campo obrigatório para nome -->  
+
+                        <label for="nascimento">Data de nascimento</label>  
+                        <input type="date" id="nascimento" name="nascimento" required> <!-- Campo para selecionar a data -->  
+
+                        <label for="cpf">CPF</label>  
+                        <input type="text" id="cpf" name="cpf" required> <!-- Campo obrigatório para CPF -->  
+
+                        <label for="sexo">Sexo</label>  
+                        <select id="sexo" name="sexo"> <!-- Dropdown para escolha do sexo -->  
+                            <option value="feminino">Feminino</option>  
+                            <option value="masculino">Masculino</option>  
+                        </select>  
+
+                        <label for="email">E-mail</label>  
+                        <input type="email" id="email" name="email" required> <!-- Campo obrigatório de email -->  
+
+                        <label for="telefone">Telefone</label>  
+                        <input type="tel" id="telefone" name="telefone" required> <!-- Campo obrigatório de telefone -->  
+
+                        <!-- Campo para Upload de Documento de Identificação -->  
+                        <div class="upload-container">  
+                            <p>Documento de Identificação (RG ou CNH)</p>  
+                            <label for="upload-documento" class="upload-box">  
+                                <img src="cloud-upload.png" alt="Ícone de upload" />  
+                                <span>Clique aqui para selecionar o arquivo</span>  
+                                <input type="file" id="upload-documento" name="documento_identificacao" class="hidden-input" accept=".jpg,.png,.pdf" />  
+                            </label>  
+                        </div>  
+                    </fieldset>  
+
+                    <!-- Endereço -->   
+                    <fieldset>  
+                        <legend>Endereço</legend>  
+                        <label for="cep">CEP</label>  
+                        <input type="text" id="cep" name="cep" required>  
+
+                        <label for="numero">Número</label>  
+                        <input type="text" id="numero" name="numero" required>  
+
+                        <label for="rua">Rua</label>  
+                        <input type="text" id="rua" name="rua">  
+
+                         <label for="bairro">Bairro</label>  
+                         <input type="text" id="bairro" name="bairro" required>  
+
+                         <label for="cidade">Cidade</label>  
+                        <input type="text" id="cidade" name="cidade" required>  
+
+                        <!-- Campo para Upload do Comprovante de Residência -->  
+                        <div class="upload-container">  
+                            <p>Comprovante de residência</p>  
+                            <label for="upload-comprovante" class="upload-box">  
+                                <img src="cloud-upload.png" alt="Ícone de upload" />  
+                                <span>Clique aqui para selecionar o arquivo</span>  
+                                <input type="file" id="upload-comprovante" name="comprovante_endereco" class="hidden-input" accept=".jpg,.png,.pdf" />  
+                            </label>  
+                        </div>  
+                    </fieldset>  
+
+                    <!-- Informações Adicionais -->  
+                    <fieldset>  
+                        <legend>Informações Adicionais</legend> <!-- Seção para dados extras -->  
+
+                        <label for="disponibilidade">Disponibilidade de horário</label>  
+                        <input type="text" id="disponibilidade" name="disponibilidade" required> <!-- Horário disponível -->  
+
+                        <label for="escolaridade">Formação acadêmica</label>  
+                        <select id="escolaridade" name="escolaridade"> <!-- Dropdown para indicar escolaridade -->  
+                            <option value="fundamental">Ensino Fundamental</option>  
+                            <option value="medio">Ensino Médio</option>  
+                            <option value="superior">Ensino Superior</option>  
+                            <option value="pos">Pós-graduação</option>  
+                        </select>  
+
+                        <label for="instituicao">Instituição de Ensino</label>  
+                        <input type="text" id="instituicao" name="instituicao" required> <!-- Campo obrigatório -->  
+
+                        <label for="curso">Curso</label>  
+                        <input type="text" id="curso" name="curso" required> <!-- Campo obrigatório -->  
+
+                        <label for="semestre">Semestre</label>  
+                        <input type="number" id="semestre" name="semestre" required> <!-- Indica semestre atual -->  
+
+                        <label for="motivacao">Por que você deseja participar do Programa Trilhas?</label>  
+                        <textarea id="motivacao" name="motivacao" required></textarea> <!-- Campo para texto de motivação -->  
+                    </fieldset>  
+
+                    <!-- Trilhas de Aprendizagem -->  
+                    <fieldset class="trilhas">  
+                        <legend>Trilhas de Aprendizagem</legend> <!-- Escolha da área de interesse -->  
+
+                        <p>Selecione apenas uma trilha:</p>  
+
+                        <div class="card">  
+                            <input type="radio" id="frontend" name="trilha" value="front-end" required>  
+                            <label for="frontend">  
+                                <img src="front-end.png" alt="Ícone Front-end" class="icone">  
+                                <span>Programação Front-end</span>  
+                            </label>  
+                        </div>  
+
+                        <div class="card">  
+                            <input type="radio" id="backend" name="trilha" value="back-end">  
+                            <label for="backend">  
+                                <img src="back-end.png" alt="Ícone Back-end" class="icone">  
+                                <span>Programação Back-end</span>  
+                            </label>  
+                        </div>  
+
+                        <div class="card">  
+                            <input type="radio" id="jogos" name="trilha" value="jogos">  
+                            <label for="jogos">  
+                                <img src="jogos.png" alt="Ícone Jogos" class="icone">  
+                                <span>Programação de Jogos</span>  
+                            </label>  
+                        </div>  
+
+                        <div class="card">  
+                            <input type="radio" id="design" name="trilha" value="design">  
+                            <label for="design">  
+                                <img src="ux.png" alt="Ícone UX" class="icone">  
+                                <span>Design e Experiência</span>  
+                            </label>  
+                        </div>  
+
+                        <div class="card">  
+                            <input type="radio" id="dados" name="trilha" value="dados">  
+                            <label for="dados">  
+                                <img src="Frame 48095973.png" alt="Ícone Dados" class="icone">  
+                                <span>Ciência de Dados</span>  
+                            </label>  
+                        </div>  
+                    </fieldset>  
+
+                    <h2>Dados de Acesso</h2>  
+                    <div class="form-group">  
+                        <label for="usuarioId"> Crie o ID do Usuário:</label>  
+                        <input type="text" id="usuarioId" name="usuarioId" required>  
+                    </div>  
+
+                    <div class="form-group">  
+                        <label for="senha"> Crie uma Senha:</label>  
+                        <input type="password" id="senha" name="senha" required>  
+                    </div>  
+
+                    <div class="termos">  
+                        <label>  
+                            <input type="checkbox" required> Concordo com os <a href="#">Termos e Condições</a> e a <a href="#">Política de Privacidade</a>.  
+                        </label>  
+                    </div>  
+
+                    <div class="botoes">  
+                        <button type="reset">Cancelar</button>
+                        <button type="button" id="salvarTemporario">Salvar Dados</button>  
+                        <button type="submit">Fazer inscrição</button>  
+                    </div>  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+   
+    <script src="script.js"></script>  
+</body>  
+</html>

@@ -1,0 +1,190 @@
+/* login.css */
+
+/* Importação da Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Variáveis de Cores e Tipografia */
+:root {
+    /* Cores */
+    --brand-primary: #F25F5C;
+    --brand-secondary: #F67841;
+    --text-primary: #ba4326;
+    --text-secondary: #fbcd94;
+    --text-tertiary: #e24a24;
+    --surface-primary: #EAEAEA;
+    --surface-secondary: #FFD3BAD6;
+    --stroke-default: #FFFFFF;
+    --stroke-highlight: #F25F5C;
+    --semantic-error: #DC2626;
+
+    /* Tipografia */
+    --font-family: 'Poppins', sans-serif;
+    --heading1-size: 32px;
+    --heading2-size: 24px;
+    --heading3-size: 20px;
+    --heading4-size: 16px;
+    --line-height: 1.2;
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+}
+
+/* Geral */
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    background-color: #2D2B3E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+/* Container Principal da Tela de Login */
+.login-container {
+    background: var(--surface-primary);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Caixa do Formulário de Login */
+.login-box {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Títulos e Textos */
+h2 {
+    text-align: center;
+    color: var(--brand-primary);
+    font-size: var(--heading2-size);
+    margin-bottom: 20px;
+    font-weight: var(--font-weight-bold);
+}
+
+p {
+    font-size: 16px;
+    line-height: var(--line-height);
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Inputs, Seletores e Textareas */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid var(--stroke-default);
+    border-radius: 20px;
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--stroke-highlight);
+    outline: none;
+    box-shadow: 0 0 5px var(--stroke-highlight);
+}
+
+/* Agrupamento dos Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Botões */
+button {
+    background-color: var(--brand-primary);
+    color: var(--surface-primary);
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: var(--font-weight-bold);
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #F19994;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    transition: color 0.2s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--brand-secondary);
+}
+
+/* Estilo para checkbox e termos */
+.termos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.illustration_login {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */  
+.illustration_login img {  
+    width: 100%; /* Ajusta a imagem no contêiner */  
+    max-width: 300px; /* Define um tamanho máximo */  
+    height: auto; /* Mantém a proporção da imagem */  
+    display: block;  
+    margin: 0 auto; /* Centraliza a imagem */  
+}  
+
+/* Adicione Media Queries para tamanhos de tela menores */  
+@media (max-width: 768px) {  
+    .container {  
+        flex-direction: column; /* Empilha elementos (ilustração e formulário) */  
+        align-items: center;   
+    }  
+
+    .formulario {  
+        max-width: 90%; /* Reduz o formulário para ajustar em telas menores */  
+    }  
+
+    .illustration_login img {  
+        max-width: 200px; /* Ajusta ainda mais a imagem em telas pequenas */  
+    }  
+}  
+
+@media (max-width: 480px) {  
+    .content {  
+        padding: 20px; /* Reduz o padding em telas muito estreitas */  
+    }  
+
+    h2 {  
+        font-size: var(--heading4-size); /* Reduz o tamanho do título */  
+    }  
+
+    p {  
+        font-size: 14px;  
+    }  
+
+    button {  
+        font-size: 14px; /* Ajusta o botão */  
+    }  
+}

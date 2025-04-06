@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html lang="pt-br">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Login - Plataforma Trilhas</title>  
+  <link rel="stylesheet" href="login.css">  
+</head>  
+<body>  
+  <div class="container">  
+    <div class="content">  
+      <!-- Ilustração opcional -->  
+      <div class="illustration_login">  
+        <img src="codyboylogin.png" alt="Ilustração de login">  
+      </div>  
+
+      <!-- Formulário de Login -->  
+      <div class="formulario">  
+        <form id="formLogin">  
+          <h2>Entrar na Plataforma Trilhas 2B</h2>  
+          <p>Insira suas credenciais para acessar sua conta.</p>  
+
+          <div class="input-group">  
+            <label for="usuarioId">ID do Usuário</label>  
+            <input type="text" id="usuarioId" name="usuarioId" required>  
+            <span class="erro" id="erro-usuarioId"></span>  
+          </div>  
+
+          <div class="input-group">  
+            <label for="senha">Senha</label>  
+            <input type="password" id="senha" name="senha" required>  
+            <span class="erro" id="erro-senha"></span>  
+          </div>  
+
+          <div class="termos" style="justify-content: space-between; width: 100%;">  
+            <label>  
+              <input type="checkbox" name="lembrar" style="width: auto;"> Lembrar-me  
+            </label>  
+            <a href="#">Esqueceu a senha?</a>  
+          </div>  
+
+          <div class="botoes" style="justify-content: center;">  
+            <button type="submit">Entrar</button>  
+          </div>  
+
+          <p style="text-align: center; margin-top: 20px;">  
+            Não tem uma conta? <a href="index.html">Cadastre-se</a>  
+          </p>  
+        </form>  
+      </div>  
+    </div>  
+  </div>  
+  <script src="login.js"></script>  
+</body>  
+</html>
