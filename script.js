@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {  // Aguardando o car
         document.getElementById('cpf').value = dadosSalvos.cpf || '';  
         document.getElementById('email').value = dadosSalvos.email || '';  
         document.getElementById('telefone').value = dadosSalvos.telefone || '';  
-        document.getElementById('usuarioId').value = dadosSalvos.id || ''; // Corrigido para "usuarioId"  
+        document.getElementById('usuarioId').value = dadosSalvos.id || '';   
         document.getElementById('senha').value = dadosSalvos.senha || '';  
 
         alert('Os dados salvos anteriormente foram preenchidos automaticamente!');  
